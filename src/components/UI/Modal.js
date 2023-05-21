@@ -17,7 +17,7 @@ const Backdrop = (props) => {
 
   const Modal = props => {
     return <>
-    {ReactDOM.createPortal(<Backdrop/>, portalElement)}
+    {ReactDOM.createPortal(<Backdrop onClose={props.onClose} />, portalElement)}
     {ReactDOM.createPortal(<ModalOverlay>{props.children}</ModalOverlay>, portalElement)}
     </>
   }
